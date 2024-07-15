@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio ธนพัฒน์ เอกพรผดุง</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #0062E6, #33AEFF);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        nav {
+            background: #333;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .profile {
+            text-align: center;
+            padding: 2rem;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 1rem;
+            border: 4px solid #0062E6;
+        }
+        .profile h2 {
+            margin: 0.5rem 0;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        .profile p {
+            font-weight: 300;
+            color: #666;
+            margin: 0.5rem 0 2rem;
+        }
+        section {
+            padding: 2rem;
+            border-top: 1px solid #ddd;
+        }
+        section h2 {
+            border-bottom: 2px solid #0062E6;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .skills ul, .projects ul, .activities ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skills li, .projects li, .activities li {
+            background: #f9f9f9;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-left: 5px solid #0062E6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            flex: 1 1 calc(33.333% - 2rem);
+            box-sizing: border-box;
+        }
+        .skills li {
+            flex: 1 1 100%;
+        }
+        .projects li {
+            text-align: center;
+        }
+        .projects li img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .projects li a {
+            color: #0062E6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .projects li a:hover {
+            text-decoration: underline;
+        }
+        .activities li img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+        .activities li p {
+            margin: 0;
+            font-weight: 500;
+            text-align: center;
+        }
+        .skill-bar {
+            position: relative;
+            display: block;
+            height: 30px;
+            background: #ddd;
+            border-radius: 15px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            border-radius: 15px;
+            background: linear-gradient(to right, #33AEFF, #0062E6);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .skill-bar span::after {
+            content: attr(data-label);
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            color: #fff;
+            font-weight: 700;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            border-radius: 0 0 10px 10px;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: #33AEFF;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .skills li, .projects li, .activities li {
+                flex: 1 1 calc(50% - 2rem);
+            }
+        }
+        @media (max-width: 480px) {
+            .skills li, .projects li, .activities li {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skill</a>
+        <a href="#projects">Project</a>
+        <a href="#activities">Activitie</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="profile" id="profile">
+            <img src="profile-picture.jpg" alt="รูปโปรไฟล์ของธนพัฒน์">
+            <h2> Hi </h2>
+            <p>My name is Thanapat Ekpornpadung
+                I am now studying in Faculty of Information Technology and Innovation, Bangkok University.
+                I create this website to present myself, my skills, my activities.
+                
+                You will see who am I and what I can do.</p>
+        </div>
+        <section class="skills" id="skills">
+            <h2>Skill</h2>
+            <ul>
+                <li>
+                    <label>HTML</label>
+                    <div class="skill-bar">
+                        <span style="width: 90%;" data-label="90%"></span>
+                    </div>
+                </li>
+                <li>
+                    <label>CSS</label>
+                    <div class="skill-bar">
+                        <span style="width: 85%;" data-label="85%"></span>
+                    </div>
+                </li>
+                <li>
+                    <label>JavaScript</label>
+                    <div class="skill-bar">
+                        <span style="width: 80%;" data-label="80%"></span>
+                    </div>
+                </li>
+                <li>
+                    <label>React</label>
+                    <div class="skill-bar">
+                        <span style="width: 60%;" data-label="60%"></span>
+                    </div>
+                </li>
+                <li>
+                    <label>Python</label>
+                    <div class="skill-bar">
+                        <span style="width: 70%;" data-label="70%"></span>
+                    </div>
+                </li>
+                <li>
+                    <label>Lua</label>
+                    <div class="skill-bar">
+                        <span style="width: 65%;" data-label="65%"></span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="projects" id="projects">
+            <h2>Project</h2>
+            <ul>
+                <li>
+                    <img src="project1.jpg" alt="โครงการ A">
+                    <a href="#"> สร้างเกมฟุตบอลเสมือนจริงในเกม Roblox </a>
+                </li>
+                <li>
+                    <img src="project2.jpg" alt="โครงการ B">
+                    <a href="#"> สร้างเว็ปไซต์สำหรับการสอนเล่นกีตาร์ พัฒนาโดยใช้ภาษา HTML JavaScript </a>
+                </li>
+                <li>
+                    <img src="project3.jpg" alt="โครงการ C">
+                    <a href="#">โครงการ C: ออกแบบและพัฒนาเว็บส่วนตัวด้วย HTML และ CSS</a>
+                </li>
+                <div class="container">
+                    <div class="profile" id="profile">
+                        <img src="profile-picture.jpg" alt="รูปโปรไฟล์ของธนพัฒน์">
+                        <h2> Contact </h2>
+                        <p>Email Thanapat.ekpo@bumail.net</p>
+                        <p>Phone 0637604236</p>
+                        
+                    </div>
